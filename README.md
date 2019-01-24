@@ -5,9 +5,13 @@ This python script can work as a standalone python module installer and can be u
 *uses pip._internal main() function to install
 
 #pros of using this script
+
   *Standalone installing script
+  
   *Can install many modules at once
+  
   *gives report of how many script left to be installed(unsuccessful attempts)
+  
 
 #usage
   ~ Direct 
