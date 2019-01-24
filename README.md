@@ -6,21 +6,27 @@ This python script can work as a standalone python module installer and can be u
 
 #pros of using this script
 
-  *Standalone installing script
+    *Standalone installing script
   
-  *Can install many modules at once
+    *Can install many modules at once
   
-  *gives report of how many script left to be installed(unsuccessful attempts)
+    *gives report of how many script left to be installed(unsuccessful attempts)
   
 
 #usage
-  ~ Direct 
+
+  ~ Direct
+  
       : run and follow instruction
+  
+  
   ~ Importing to other python scripts
+  
       : use below command to import
         from dependencyhandler import dependencyhandler
       : now this function takes a list consisting of all module names that are to be installed, as a arguement  
         *example: 
+        
         
                    dep=['pillow','jupyter']
                    rs,lftdep=dependencyhandler(dep)
