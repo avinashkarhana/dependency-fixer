@@ -17,9 +17,12 @@ This python script can work as a standalone python module installer and can be u
         from dependencyhandler import dependencyhandler
       : now this function takes a list consisting of all module names that are to be installed, as a arguement  
         *example: 
+        
                    dep=['pillow','jupyter']
                    rs,lftdep=dependencyhandler(dep)
+                   
          This function returns 2 parameters : 
                   >result(1/0/-1) 1: All modules installed 0:No modules installed -1:Some modules can not be installed
                   >leftdependencies(list of unsuccessfull modules)
+                  
 **While importing in other python scripts be sure this script is in same folder as calling script or specify appropriate path while importing
