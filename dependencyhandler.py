@@ -1,35 +1,35 @@
 # Dependencyhandler function START        
 def dependencyhandler(depend):
-            result=0
-            depin=input("Module missing ! named "+str(depend)+" !\nIf you want,I can install it by myself automatically.\nTo do so make sure you have a working internet connection because I will Need it to install Module.\n Y for yes and N for no?")
-            if(depin=="y" or depin=="Y"):
-                from pip._internal import main
-                leftdep=[]
-                for go in depend:
-                    package=str(go)
-                    x=main(['install', package,'--user'])
-                    if not x:
-                        print("Successfuly installed Module "+package+" !")
-                    else:
-                        leftdep.append(go)
-                        print("Sorry I was unable to install that module "+package+"! Please try running 'pip install "+package+"' in your command line(terminal or cmd)")  
-                if len(leftdep)==0:
-                    print("############################################\n\n\nAll given Modules Installed!")
-                    result=1
-                elif len(leftdep)<len(depend) and len(leftdep)!=0:
-                    result=-1
-                    print("############################################\n\n\n"+str(len(leftdep))+" Modules can not be installed !\nLeft Modules are ")
-                    for w in leftdep:
-                        print("*"+str(w))
-                    print("Try Fixing these by yourself.")
-                elif len(leftdep)==len(depend):
-                    print("############################################\n\n\nNo Dependencies Fixed !\nLeft Modules are ")
-                    for w in leftdep:
-                        print("*"+str(w))
-                    result=0
+    result=0
+    depin=input("Module missing ! named "+str(depend)+" !\nIf you want,I can install it by myself automatically.\nTo do so make sure you have a working internet connection because I will Need it to install Module.\n Y for yes and N for no?")
+    if(depin=="y" or depin=="Y"):
+        from pip._internal import main
+        leftdep=[]
+        for go in depend:
+            package=str(go)
+            x=main(['install', package,'--user'])
+            if not x:
+                print("Successfuly installed Module "+package+" !")
             else:
-                result=0
-            return result,leftdep # returns three type of values 0(no success),1(all success),-1(partial success) and a list with left dependencies that can not be fixed by function
+                leftdep.append(go)
+                print("Sorry I was unable to install that module "+package+"! Please try running 'pip install "+package+"' in your command line(terminal or cmd)")  
+        if len(leftdep)==0:
+            print("############################################\n\n\nAll given Modules Installed!")
+            result=1
+        elif len(leftdep)<len(depend) and len(leftdep)!=0:
+            result=-1
+            print("############################################\n\n\n"+str(len(leftdep))+" Modules can not be installed !\nLeft Modules are ")
+            for w in leftdep:
+                print("*"+str(w))
+            print("Try Fixing these by yourself.")
+        elif len(leftdep)==len(depend):
+            print("############################################\n\n\nNo Dependencies Fixed !\nLeft Modules are ")
+            for w in leftdep:
+                print("*"+str(w))
+            result=0
+    else:
+        result=0
+    return result,leftdep # returns three type of values 0(no success),1(all success),-1(partial success) and a list with left dependencies that can not be fixed by function
 # Dependencyhandler function END
 
 if __name__ == "__main__":
