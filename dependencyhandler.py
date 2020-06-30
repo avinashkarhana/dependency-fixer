@@ -3,11 +3,11 @@ def dependencyhandler(depend):
     result=0
     depin=input("Module missing ! named "+str(depend)+" !\nIf you want,I can install it by myself automatically.\nTo do so make sure you have a working internet connection because I will Need it to install Module.\n Y for yes and N for no?")
     if(depin=="y" or depin=="Y"):
-        from pip._internal import main
+        import pip._internal.cli.main
         leftdep=[]
         for go in depend:
             package=str(go)
-            x=main(['install', package,'--user'])
+            x=pip._internal.cli.main.main(['install', package,'--user'])
             if not x:
                 print("Successfuly installed Module "+package+" !")
             else:
