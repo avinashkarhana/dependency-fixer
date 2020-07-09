@@ -1,5 +1,5 @@
 # Dependencyhandler function START        
-def dependencyhandler(depend):
+def dependencyfixer(depend):
     result=0
     depin=input("Module missing ! named "+str(depend)+" !\nIf you want,I can install it by myself automatically.\nTo do so make sure you have a working internet connection because I will Need it to install Module.\n Y for yes and N for no?")
     if(depin=="y" or depin=="Y"):
@@ -46,4 +46,4 @@ if __name__ == "__main__":
             if we!="Y" and we!="y":xx=-1
     print("Modules to be instlled : "+str(depend))
     q=input("Fix ? Y for yes N for no. : ")
-    if q=="y" or q=="Y":dependencyhandler(depend)
+    if q=="y" or q=="Y":dependencyfixer(depend)
