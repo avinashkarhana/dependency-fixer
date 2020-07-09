@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: dependency-fixer
+Version: 1.0.1
+Summary: A simple inscript multi-package installer
+Home-page: https://github.com/avinashkarhana/dependencyfixer
+Author: Avinash Karhana
+Author-email: avinashkarhana1@gmail.com
+License: UNKNOWN
+Description: # dependencyfixer
+        
+        A python dependency fixer and importable script function
+        
+          
+        
+        This python script can work as a standalone python module installer and can be used to install modules in program runtime by importing the **dependencyfixer** function into program.
+        
+        >uses `pip._internal.cli.main.main()` function to install
+        
+          
+        
+        ## #pros of using this package
+        
+          
+        
+        * Standalone installing script
+        
+        * Can install many modules at once
+        
+        * gives report of how many script left to be installed(unsuccessful attempts)
+        
+          
+        
+        ### #install
+        
+        `pip install dependency-fixer`
+        
+          
+        
+        ### #usage
+        
+        > **Direct:**
+        >> 	 run **dependencyfixer.py** and follow instruction
+        
+        >**Importing to other python scripts**
+        >>  Use below command to import
+        >>* `from dependency-fixer import dependencyfixer`
+        >>>* Function (dependencyfixer) takes a list consisting of all module names that are to be installed, as a arguement
+        >>>* ***Example***:
+        `dep=['pillow','jupyter']
+        result,leftdep=dependencyfixer(dep)`
+        >>>* This function returns 2 values :
+        >>> > * leftdependencies : (list of unsuccessfull modules)
+        >>> > * result {1,0,-1} 
+        >>>> | 1   | :   All modules installed
+        >>>> | 0   | :   No modules installed
+        >>>> | -1 | :   Some modules can not be installed
+        
+        **If not installed by pip or using repo clone, to import in other python scripts be sure 'dependencyfixer.py' script is in same folder as calling script or specify appropriate path while importing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
