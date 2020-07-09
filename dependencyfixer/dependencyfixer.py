@@ -1,4 +1,4 @@
-# Dependencyhandler function START        
+# Dependencyfixer function START        
 def dependencyfixer(depend):
     result=0
     depin=input("Module missing ! named "+str(depend)+" !\nIf you want,I can install it by myself automatically.\nTo do so make sure you have a working internet connection because I will Need it to install Module.\n Y for yes and N for no?")
@@ -30,7 +30,7 @@ def dependencyfixer(depend):
     else:
         result=0
     return result,leftdep # returns three type of values 0(no success),1(all success),-1(partial success) and a list with left dependencies that can not be fixed by function
-# Dependencyhandler function END
+# Dependencyfixer function END
 
 if __name__ == "__main__":
     depend=[]
