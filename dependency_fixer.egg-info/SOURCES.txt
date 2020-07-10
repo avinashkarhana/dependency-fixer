@@ -3,4 +3,7 @@ setup.py
 dependency_fixer.egg-info/PKG-INFO
 dependency_fixer.egg-info/SOURCES.txt
 dependency_fixer.egg-info/dependency_links.txt
+dependency_fixer.egg-info/requires.txt
 dependency_fixer.egg-info/top_level.txt
+dependencyfixer/__init__.py
+dependencyfixer/dependencyfixer.py
