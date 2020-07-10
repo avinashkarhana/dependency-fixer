@@ -28,9 +28,9 @@ This python script can work as a standalone python module installer and can be u
 >>> >* Arguements: 
 >>>> >* Mandatory: `dep` ( List of all packages to be installed or checked )
 >>>> >* Optional: 
-➤`instantkill` ( If set `True` then stops any futher execution of script in which function is used ) ***( False by default )***
-➤`auto` ( If set `False` then asks for user's consent to install packages, if user refuses, then return result=0 )  ***( True by default )***
-➤`verbose` ( If set `True` then prints details in console during installation and after installation ) ***( False by default )***
+>>>>> >* ➤`instantkill` ( If set `True` then stops any futher execution of script in which function is used ) ***( False by default )***
+>>>>> >* ➤`auto` ( If set `False` then asks for user's consent to install packages, if user refuses, then return result=0 )  ***( True by default )***
+>>>>> >* ➤`verbose` ( If set `True` then prints details in console during installation and after installation ) ***( False by default )***
 >>* ***Example***:
 `dep=['pillow','jupyter']`
 `result,leftdep=fix(dep)`
