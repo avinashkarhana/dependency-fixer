@@ -1,4 +1,5 @@
 # dependencyfixer
+[![Build Status](https://travis-ci.com/avinashkarhana/dependency-fixer.svg?branch=master)](https://travis-ci.com/avinashkarhana/dependency-fixer)
 
 A python dependency fixer and importable script function
 
