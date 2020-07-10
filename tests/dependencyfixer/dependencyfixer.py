@@ -8,7 +8,7 @@ def fix(depend,instantkill=False,auto=True,verbose=False):
         depin=input("Module missing ! >"+str(depend)+"!\nIf you want,I can install it by myself automatically.\nTo do so I need active internet connection, so make sure you have a working internet connection!\n Enter Y for yes and N for no?")
     else:
         depin='y'
-    if(depin=="y" or depin=="Y"):
+    if depin in ["y","Y"]:
         import pip._internal.cli.main
         for go in depend:
             package=str(go)
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     x=input("Enter Module to be installed:")
     depend.append(x)
     ww=input("Want to add more module ? Y for yes and N for no. : ")
-    if ww=="Y" or ww=="y":
+    if ww in ["Y", "y"]:
         xx=1
         while(xx>0):
             x=input("Enter module to be fixed:")
@@ -54,4 +54,4 @@ if __name__ == "__main__":
             if we!="Y" and we!="y":xx=-1
     print("Modules to be instlled : "+str(depend))
     q=input("Fix ? Y for yes N for no. : ")
-    if q=="y" or q=="Y":fix(depend)
+    if q in ["y", "Y"]:fix(depend)
